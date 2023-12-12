@@ -1,0 +1,117 @@
+.titremere-blog{
+    color: #308AA7;
+}
+.carte-blog-admin{
+    /* width: 900px; */
+    height: auto;
+}
+.boutonajouter-blog{
+   background-color: #E75761;
+   color: white;
+   border: 2px solid #E75761 ;
+}
+
+.carte-blog-admin{
+    border: 2px solid #E75761;
+    padding: 0;
+}
+.boutoncherchemoi-article{
+   width: 40px;
+   background-color: #E75761;
+   color: white;
+   border: 2px solid #E75761 ;
+}
+.inputrecherchemoi-article{
+    border: 2px solid #E75761 ;
+    box-shadow: #E75761;
+}
+.boutonmodif-blog{
+    background-color: #085B75;
+    color: white;
+}
+.boutondetails-blog{
+    background-color: #308AA7;
+    color: white;
+}
+.boutonsupprim-blog{
+    background-color: #E75761;
+    color: white;
+}
+.boutonpubliermodel-blog{
+    background-color: #308AA7;
+    color: white;
+}
+.boutonannulermodel-blog{
+    background-color: #E75761;
+    color: white;
+}
+.articleinput-blog{
+    width: 100%;
+    min-height: 200px;
+}
+.pagination li {
+    border: none;
+}
+
+.pagination li a {
+    color: black;
+    cursor: pointer;
+}
+
+.pagination .active a {
+    background-color: #E75761;
+    color: white;
+}
+@media screen and (max-width:1200px) {
+    
+}
+
+
+
+
+
+
+
+/* **************************************************************************************************************************** */
+
+.ajoutArticle input{
+    border: 1px solid #E75761;
+}
+
+.btn-add{
+    background-color: #308AA7 !important;
+    color: white;
+    font-weight: bold !important;
+}
+
+.titreAjout, .titreMdfArticle,.titreDetail{
+    color: #E75761;
+    font-weight: bold;
+}
+
+.btn-closeAjout{
+    background-color: #E75761;
+    color: white;
+    border-radius: 50%;
+}
+
+.mdfArticle input,textarea{
+    border: 1px solid #E75761;
+}
+
+.btnUpdate{
+    background-color: #308AA7 !important;
+    color: white;
+    font-weight: bold;
+}
+
+.btnAnnuler{
+    background-color: #E75761 !important;
+    color: white;
+    font-weight: bold;
+}
+
+.btnCloseDetail{
+    background-color: #E75761;
+    color: white;
+}

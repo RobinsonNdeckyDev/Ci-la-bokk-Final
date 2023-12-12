@@ -1,0 +1,26 @@
+.titre-carte-contact{
+ /* color: #308AA7; */
+ color: white;
+ background-color: #E75761;
+ font-weight: 700;
+ font-size: larger;
+}
+.email-carte-contact{
+
+}
+.titremere-contact{
+    color: #308AA7;
+}
+.pagination li {
+    border: none;
+}
+
+.pagination li a {
+    color: black;
+    cursor: pointer;
+}
+
+.pagination .active a {
+    background-color: #E75761;
+    color: white;
+}

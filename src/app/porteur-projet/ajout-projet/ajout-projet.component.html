@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- My CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <img src="../../../assets/images/logo.png" alt="" height="80px" class="m-0 m-auto ">
+        </a>
+        <hr class="border">
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="#"  href="#content" [routerLink]="['/ajout']">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Liste projet</span>
+                </a>
+            </li>
+            <li>
+                <a href="#content" [routerLink]="['/liste-investissement-porteur']">
+                    <i class='bx bxs-shopping-bag-alt'></i>
+                    <span class="text">Investissement</span>
+                </a>
+            </li>
+            <li>
+                <a href="#"  href="#content" [routerLink]="['/profilporteur']">
+                    <i class='bx bxs-doughnut-chart'></i>
+                    <span class="text">Profil</span>
+                </a>
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Se deconnecter</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <a href="#" class="nav-link">Bienvenue</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Rechercher..." class="border">
+                    <button type="submit" class="search-btn border"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class='bx bxs-bell' style="color: #308AA7;"></i>
+                <span class="num" style="color: #E75761;">8</span>
+            </a>
+            <a href="#" class="profile">
+                <img
+                    src="https://img.freepik.com/photos-gratuite/close-up-portrait-belle-jeune-femme-afro-americaine-coupe-cheveux-boucles-afro-souriant-expression-agreable-heureuse-profitant-vacances-hiver-portant-pull-mur-bleu_1258-35442.jpg?size=626&ext=jpg&ga=GA1.1.810580184.1680065265&semt=ais">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <button class="btn text-white py-2 px-4 fw-bold" id="btn-ajout"  data-bs-toggle="modal" data-bs-target="#modalAjoutProjet">Ajouter</button>
+                </div>
+                <form action="#">
+                    <div class="form-input">
+                        <input type="search" placeholder="Rechercher..." class="border">
+                        <button type="submit" class="search-btn border"><i class='bx bx-search'></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="container mt-4 p-0 ">
+                <div class="contain-card">
+                    <div class="card">
+                        <img src="https://img.freepik.com/photos-gratuite/smiley-femme-tir-complet-tenant-tablette_23-2149894712.jpg?w=826&t=st=1702037163~exp=1702037763~hmac=09a1131237a1b454ce522e2ced8ba7720fc63e6bfc8703779ec1134ef6c8bcb9"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Card title</h5>
+                            <p class="card-text text-center">This is a longer card with supporting text below as a
+                                natural lead-in to additional content.
+                            </p>
+                            <button class="btn-detail mb-3" data-bs-toggle="modal" data-bs-target="#modalDetailProjet">Detail</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://img.freepik.com/photos-gratuite/smiley-femme-tir-complet-tenant-tablette_23-2149894712.jpg?w=826&t=st=1702037163~exp=1702037763~hmac=09a1131237a1b454ce522e2ced8ba7720fc63e6bfc8703779ec1134ef6c8bcb9"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Card title</h5>
+                            <p class="card-text text-center">This is a longer card with supporting text below as a
+                                natural lead-in to additional
+                                content.
+                            </p>
+                            <button class="btn-detail mb-3">Detail</button>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://img.freepik.com/photos-gratuite/smiley-femme-tir-complet-tenant-tablette_23-2149894712.jpg?w=826&t=st=1702037163~exp=1702037763~hmac=09a1131237a1b454ce522e2ced8ba7720fc63e6bfc8703779ec1134ef6c8bcb9"
+                            class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Card title</h5>
+                            <p class="card-text text-center">This is a longer card with supporting text below as a
+                                natural lead-in to additional
+                                content.
+                            </p>
+                            <button class="btn-detail mb-3">Detail</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+        </main>
+
+        <!-- Modal Ajout  projet -->
+        <div class="modal" tabindex="-1" id="modalAjoutProjet">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title col-12 text-center">Ajouter un projet</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form">
+                            <div class="mb-4">
+                                <label for="inputLibelle" class="form-label fw-bold">Libelle</label>
+                                <input type="text" name="libelle" class="form-control" id="inputlibelle" placeholder="Entrez le libelle">
+                            </div>
+                            <div class="mb-4">
+                                <label for="inputDuree" class="form-label fw-bold">Duree</label>
+                                <input type="text" name="duree" class="form-control" id="inputduree" placeholder="Entrez la duree" >
+                            </div>
+                            <div class="mb-4">
+                                <label for="inputCout" class="form-label fw-bold">Cout</label>
+                                <input type="text" name="cout" class="form-control" id="inputCout" placeholder="Entrez le cout">
+                            </div>
+                            <div class="mb-4">
+                                <label for="inputImage" class="form-label fw-bold">Image</label>
+                                <input type="file" class="form-control" id="inputGroupFile02">
+                            </div>
+                            <div class="mb-4">
+                                <label for="inputDescription" class="form-label fw-bold">Description</label>
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="description" name="description" id="description" hidden value=""></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-ajoutProjet m-0 m-auto " data-bs-dismiss="modal">Ajouter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal detail -->
+        <div class="modal  modal-lg" tabindex="-1" id="modalDetailProjet">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header border-0 ">
+                        <h5 class="modal-title col-12 text-center ">Detail d'un projet</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card mb-3" >
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="https://img.freepik.com/photos-gratuite/smiley-femme-tir-complet-tenant-tablette_23-2149894712.jpg?w=826&t=st=1702048215~exp=1702048815~hmac=84dff7f194e8470ff50507ce6955c4790194781ff5ce3a5053b62299dde10d6e" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h6 class="fw-bold ">Titre:</h6>
+                                        <h6 class="fw-bold ">categorie:</h6>
+                                        <h6 class="fw-bold ">Duree:</h6>
+                                        <h6 class="fw-bold ">cout:</h6>
+                                        <h6 class="fw-bold ">Description:</h6>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                                            content. This content is a little bit longer.</p>
+                                        <p class="card-text">
+                                            <button class="btn btn-modif ">Modifier</button>
+                                            <button class="btn btn-sup ms-2">Supprimer</button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+
+</body>
+
+</html>

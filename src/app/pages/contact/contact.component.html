@@ -1,0 +1,54 @@
+<!-- Header -->
+<app-header class="sticky-top"></app-header>
+
+<!-- main -->
+<div class="card bg-dark text-white imagecontact">
+    <img class="img-fluid" src="../assets/images/bannieres/contact.png" alt="Card image">
+  </div>
+
+<div class="container d-flex mt-5 my-5 gap-0 contact-carte rounded-5">
+    <div class="w-75 mx-auto h-100  ">
+        <div class=" w-75 h-100 mx-auto  formulaire-contact">
+            <form class="mt-5 ">
+                <h1 class="titre-contactettitreicone">Contactez-nous</h1>
+                <p>
+                    Contactez-nous à tout moment par telephone ou par e-mail, 24h/24 et 7j/7. Utilisez le formulaire ci-dessous ou rendez-nous visite en personne.
+                </p>
+                <div class="mb-3">
+                  <input type="text" class="form-control rounded rounded-4" id="exampleInputNom" aria-describedby="nameHelp" placeholder="Nom complet *">
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control rounded rounded-4" id="exampleInputEmail" placeholder="Email *">
+                </div>
+                <div class="mb-3">
+                    <textarea type="textarea" class="form-control rounded rounded-3" id="exampleInputTextarea" placeholder="Votre message *"></textarea>
+                </div>
+                <button type="submit" class="btn btn w-100 rounded rounded-4 boutoncolor">Envoyer</button>
+            </form>
+            <div class="contact-icone my-4">
+                <div class="d-flex gap-1"> 
+                   <span><i class="bi bi-telephone fs-2 icone-contactcolor"></i></span>
+                   <div>
+                     <p><span class="fw-bold titre-contactettitreicone">Telephone</span><br>(+221) 77 777 77 77</p>
+                   </div>
+                </div>
+                <div class="d-flex gap-1">
+                   <span><i class="bi bi-geo-alt-fill fs-2 icone-contactcolor"></i></span>
+                   <div>
+                     <p><span class="fw-bold titre-contactettitreicone">Addresse</span><br>Dakar, Senegal</p>
+                   </div>
+                </div>
+                <div class="d-flex gap-1">
+                   <span><i class="bi bi-envelope-paper fs-2 icone-contactcolor"></i></span>
+                   <div>
+                     <p> <span class="fw-bold titre-contactettitreicone">Email</span><br>cilaabook@gmail.com</p>
+                   </div>
+                </div>
+               </div>
+        </div>    
+    </div>
+    <div class="w-25 boutoncolor h-100 rounded-end-5  contact-cartecouleudroit">
+    </div>
+</div>
+<!-- footer -->
+<app-footer></app-footer>

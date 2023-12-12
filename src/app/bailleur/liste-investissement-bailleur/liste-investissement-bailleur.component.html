@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- My CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+        <a href="#" class="brand">
+            <img src="../../../assets/images/logo.png" alt="" height="80px" class="m-0 m-auto ">
+        </a>
+        <hr class="border">
+        <ul class="side-menu top">
+            <li class="active">
+                <a href="#" href="#content">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="text">Liste projet</span>
+                </a>
+            </li>
+            <li>
+                <a href="#content">
+                    <i class='bx bxs-shopping-bag-alt'></i>
+                    <span class="text">Investissement</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" href="#content">
+                    <i class='bx bxs-doughnut-chart'></i>
+                    <span class="text">Profil</span>
+                </a>
+            </li>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+        </ul>
+        <ul class="side-menu">
+            <li>
+
+            </li>
+            <li>
+                <a href="#" class="logout" y>
+                    <i class='bx bxs-log-out-circle'></i>
+                    <span class="text">Se deconnecter</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+
+
+    <!-- CONTENT -->
+    <section id="content">
+        <!-- NAVBAR -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <a href="#" class="nav-link">Bienvenue nom entrepreneur</a>
+            <form action="#">
+                <div class="form-input">
+                    <input type="search" placeholder="Rechercher..." class="border">
+                    <button type="submit" class="search-btn border"><i class='bx bx-search'></i></button>
+                </div>
+            </form>
+            <input type="checkbox" id="switch-mode" hidden>
+            <label for="switch-mode" class="switch-mode"></label>
+            <a href="#" class="notification">
+                <i class='bx bxs-bell' style="color: #308AA7;"></i>
+                <span class="num" style="color: #E75761;">8</span>
+            </a>
+            <a href="#" class="profile">
+                <img
+                    src="https://img.freepik.com/photos-gratuite/close-up-portrait-belle-jeune-femme-afro-americaine-coupe-cheveux-boucles-afro-souriant-expression-agreable-heureuse-profitant-vacances-hiver-portant-pull-mur-bleu_1258-35442.jpg?size=626&ext=jpg&ga=GA1.1.810580184.1680065265&semt=ais">
+            </a>
+        </nav>
+        <!-- NAVBAR -->
+
+        <!-- MAIN -->
+        <main>
+            <div class="head-title">
+                <div class="left">
+                    <h3 style="color: #E75761;">Liste des investissements</h3>
+                </div>
+                <form action="#">
+                    <div class="form-input">
+                        <input type="search" placeholder="Rechercher..." class="border">
+                        <button type="submit" class="search-btn border"><i class='bx bx-search'></i></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-data" id="container-table">
+                <div class="order">
+
+                    <table>
+                        <thead class="table-investissement">
+                            <tr>
+                                <th>Investisseur</th>
+                                <th>Projet</th>
+                                <th>Montant</th>
+                                <th>Date</th>
+                                <th>Valide</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="ligne-table">
+                                <td>
+                                    <img src="">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>Mbay mi</td>
+                                <td><span class="status completed">2 000 000</span></td>
+                                <td>10/10/2010</td>
+                                <td>Non</td>
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modalDetailInvestissement"><i
+                                            class="bi bi-eye text-info fs-4"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="">
+                                    <p>John Doe</p>
+                                </td>
+                                <td>Mbay mi</td>
+                                <td><span class="status completed">2 000 000</span></td>
+                                <td>10/10/2010</td>
+                                <td>Non</td>
+                                <td><a href="#" data-bs-toggle="modal" data-bs-target="#modalDetailInvestissement"><i
+                                            class="bi bi-eye text-info fs-4"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </main>
+        <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <!-- Modal detail -->
+    <div class="modal  modal-lg" tabindex="-1" id="modalDetailInvestissement">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0 ">
+                    <h5 class="modal-title col-12 text-center ">Detail d'un investissement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h6 class="fw-bold ">Projet:</h6>
+                                    <h6 class="fw-bold ">Montant:</h6>
+                                    <h6 class="fw-bold ">Date:</h6>
+                                    <h6 class="fw-bold ">Description:</h6>
+                                    <p class="card-text">This is a wider card with supporting text below as a natural
+                                        lead-in to additional
+                                        content. This content is a little bit longer.</p>
+                                    <p class="card-text">
+                                        <button class="btn btn-sup ms-2">Supprimer</button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

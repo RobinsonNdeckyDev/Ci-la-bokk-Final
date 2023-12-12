@@ -1,0 +1,77 @@
+@import url(../../admin/dashboard-admin/dashboard-admin.component.css);
+
+.titreDash {
+    color: #308AA7;
+}
+
+.search {
+    /* display: flex;
+    justify-content: end; */
+}
+
+.iconsearch {
+    background-color: #E75761;
+    color: white;
+}
+
+.iconsearch i {
+    color: white;
+}
+
+.inputPorteur {
+    border: 1px solid #E75761 !important;
+}
+
+.tableIcons button {
+    margin-left: 5px;
+    margin-right: 5px;
+    /* font-size: 30px; */
+}
+
+.pagination li {
+    border: none;
+}
+
+.pagination li a {
+    color: black;
+    cursor: pointer;
+}
+
+.pagination .active a {
+    background-color: #E75761;
+    color: white;
+}
+
+.profilPorteur {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.ligne-table {
+    height: 30px;
+}
+
+.tableInfo {
+    padding-top: 20px;
+}
+.iconeCategorie-sup{
+    color: #E75761;
+}
+.iconeCategorie-modif{
+    color: #308AA7;
+}
+.boutonajouter-categorie{
+    background-color: #E75761;
+    color: white;
+    border: 2px solid #E75761 ;
+}
+
+.boutonannulermodel-blog{
+    background-color: #E75761;
+    color: white;
+}
+.boutonpubliermodel-blog{
+    background-color: #308AA7;
+    color: white;
+}

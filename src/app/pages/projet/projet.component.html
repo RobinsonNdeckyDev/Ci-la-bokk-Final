@@ -1,0 +1,215 @@
+<!-- Header -->
+<app-header class="fixed-top"></app-header>
+
+<!-- main -->
+
+<!-- Slider -->
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="imgSlide carousel-item active" data-bs-interval="5000">
+            <div class="bg-color">
+                <img src="../../../assets/images/bannieres/ban1.avif" class="h-100 img-fluid w-100" alt="...">
+                <div class="textimg">
+                    <h2>Projets innovants</h2>
+                    <span class="text-white">
+                        Investissez avec Assurance, <br> Innovez avec Clarté CilaaBook, <br>
+                        <b>Votre Partenaire dans le Succès</b>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="imgSlide carousel-item" data-bs-interval="2000">
+            <img src="../../../assets/images/bannieres/ban2.avif" class="h-100 img-fluid w-100" alt="...">
+            <div class="textimg">
+                <h2>Projets innovants</h2>
+                <span class="text-white">
+                    Investissez avec Assurance, <br> Innovez avec Clarté CilaaBook, <br>
+                    <b>Votre Partenaire dans le Succès</b>
+                </span>
+            </div>
+        </div>
+        <div class="imgSlide carousel-item">
+            <img src="../../../assets/images/bannieres/ban3.jpg" class="h-100 img-fluid w-100" alt="...">
+            <div class="textimg">
+                <h2>Projets innovants</h2>
+                <span class="text-white">
+                    Investissez avec Assurance, <br> Innovez avec Clarté CilaaBook, <br>
+                    <b>Votre Partenaire dans le Succès</b>
+                </span>
+            </div>
+        </div>
+        <div class="imgSlide carousel-item">
+            <img src="../../../assets/images/bannieres/ban4.avif" class="h-100 img-fluid w-100" alt="...">
+            <div class="textimg">
+                <h2>Projets innovants</h2>
+                <span class="text-white">
+                    Investissez avec Assurance, <br> Innovez avec Clarté CilaaBook, <br>
+                    <b>Votre Partenaire dans le Succès</b>
+                </span>
+            </div>
+        </div>
+        <div class="imgSlide carousel-item">
+            <img src="../../../assets/images/bannieres/ban5.jpg" class="h-100 img-fluid w-100" alt="...">
+            <div class="textimg">
+                <h2>Projets innovants</h2>
+                <span class="text-white">
+                    Investissez avec Assurance, <br> Innovez avec Clarté CilaaBook, <br>
+                    <b>Votre Partenaire dans le Succès</b>
+                </span>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <!-- <span class="visually-hidden">Next</span> -->
+    </button>
+</div>
+<!-- Slider -->
+
+<!-- titre -->
+<h3 class="text-center fw-bold my-5">Trouvez un projet</h3>
+
+<!-- categories -->
+<div class="categories w-50 d-flex justify-content-between mb-5 m-auto">
+    <button class="btn btnCategorie" btnCategorieActive [ngClass]="{'fond-btn': boutonActif === 1}"(click)="showComponant('all')" (click)="boutonActif = 1">Tous les projets</button>
+    <button class="btn btnCategorie">Santé</button>
+    <button class="btn btnCategorie" [ngClass]="{'fond-btn': boutonActif === 2}"(click)="showComponant('technologie')" (click)="boutonActif = 2">Technologie</button>
+    <button class="btn btnCategorie" [ngClass]="{'fond-btn': boutonActif === 3}"(click)="showComponant('mode')" (click)="boutonActif = 3">Mode</button>
+    <button class="btn btnCategorie">Agriculture</button>
+    <button class="btn btnCategorie">Education</button>
+</div>
+
+
+
+<!-- carte projet -->
+<div class="carteContainer container">
+    <!-- dropdown Categories -->
+    <div class="dropdown my-5">
+        <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catégories de projets
+        </a>
+    
+        <ul class="dropdown-menu">
+            <li>
+                <button class="dropdown-item" [ngClass]="{'fond-btn': boutonActif === 1}"(click)="showComponant('all')"
+                 (click)="boutonActif = 1">Tous les projets</button>
+            </li>
+            <li>
+                <button class="dropdown-item" [ngClass]="{'fond-btn': boutonActif === 2}"(click)="showComponant('technologie')" 
+                (click)="boutonActif = 2">Technologie</button>
+            </li>
+            <li>
+                <button class="dropdown-item" [ngClass]="{'fond-btn': boutonActif === 3}"(click)="showComponant('mode')"
+                 (click)="boutonActif = 3">Mode</button>
+            </li>
+            <li>
+                <button class="dropdown-item" [ngClass]="{'fond-btn': boutonActif === 4}" (click)="showComponant('sante')"
+                    (click)="boutonActif = 4">Santé</button>
+            </li>
+            <li>
+                <button class="dropdown-item" [ngClass]="{'fond-btn': boutonActif === 5}" (click)="showComponant('agriculture')"
+                    (click)="boutonActif = 5">Agriculture</button>
+            </li>
+            <li>
+                <button class="dropdown-item" [ngClass]="{'fond-btn': boutonActif === 6}" (click)="showComponant('education')"
+                    (click)="boutonActif = 6">Education</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-12 col-md-4">
+            <div class="carte p-3 shadow" id="all" *ngIf="currentContent === 'all'">
+                <div class="imgCarte mb-3">
+                    <img src="../../../assets/images/bannieres/ban5.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="p-0">
+                    <h5 class="text-center carteTitre fw-bold">Technologie</h5>
+                    <p class="text-justify">
+                        C'est génial que vous soyez intéressé par un projet lié à la technologie ! Les projets technologiques peuvent couvrir
+                        une variété de domaines en fonction de vos intérêts spécifiques
+                    </p>
+                    <div class="detail d-flex">
+                        <button class="btn w-100">
+                            <a href="#" class="detailLink fw-bold" routerLink="/login">Consulter</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="carte p-3 shadow" id="technologie" *ngIf="currentContent === 'technologie'">
+                <div class="imgCarte mb-3">
+                    <img src="../../../assets/images/bannieres/ban5.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="p-0">
+                    <h5 class="text-center carteTitre fw-bold">Technologie</h5>
+                    <p class="text-justify">
+                        C'est génial que vous soyez intéressé par un projet lié à la technologie ! Les projets technologiques
+                        peuvent couvrir
+                        une variété de domaines en fonction de vos intérêts spécifiques
+                    </p>
+                    <div class="detail d-flex">
+                        <button class="btn w-100">
+                            <a href="#" class="detailLink fw-bold">Consulter</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="carte p-3 shadow" id="technologie" *ngIf="currentContent === 'technologie'">
+                <div class="imgCarte mb-3">
+                    <img src="../../../assets/images/bannieres/ban5.jpg" class="card-img-top" alt="...">
+                </div>
+                <div class="p-0">
+                    <h5 class="text-center carteTitre fw-bold">Technologie</h5>
+                    <p class="text-justify">
+                        C'est génial que vous soyez intéressé par un projet lié à la technologie ! Les projets technologiques
+                        peuvent couvrir
+                        une variété de domaines en fonction de vos intérêts spécifiques
+                    </p>
+                    <div class="detail d-flex">
+                        <button class="btn w-100">
+                            <a href="#" class="detailLink fw-bold">Consulter</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- pagination -->
+<div class="pagin d-flex justify-content-center">
+    <nav aria-label="Page shadow navigation example">
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- pagination -->
+
+
+<!-- main -->
+
+
+
+<!-- footer -->
+<app-footer></app-footer>

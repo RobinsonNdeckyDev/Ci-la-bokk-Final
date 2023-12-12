@@ -1,0 +1,90 @@
+<h3 class="titreDash text-center fw-bold fs-2 my-4">liste des abonnées à la newsletter</h3>
+
+<div class="table-data" id="container-table">
+    <div class="order p-3">
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"><input type="checkbox"> Tout sélectionner</th>
+                <th scope="col">Email</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="ligne-table">
+                <td class="tableInfo"><input type="checkbox"></td>
+                <td class="tableInfo">markotto@gmail.com</td>
+                <td class="d-flex tablebtn border-0">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#sendMail">Envoyer un mail</button>
+                </td>
+            </tr>
+            <tr class="ligne-table">
+                <td class="tableInfo"><input type="checkbox"></td>
+                <td class="tableInfo">markotto@gmail.com</td>
+                <td class="d-flex tablebtn border-0">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#sendMail">Envoyer un mail</button>
+                </td>
+            </tr>
+            <tr class="ligne-table">
+                <td class="tableInfo"><input type="checkbox"></td>
+                <td class="tableInfo">markotto@gmail.com</td>
+                <td class="d-flex tablebtn border-0">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#sendMail">Envoyer un mail</button>
+                </td>
+            </tr>
+            <tr class="ligne-table">
+                <td class="tableInfo"><input type="checkbox"></td>
+                <td class="tableInfo">markotto@gmail.com</td>
+                <td class="d-flex tablebtn border-0">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#sendMail">Envoyer un mail</button>
+                </td>
+            </tr>
+            <tr class="ligne-table">
+                <td class="tableInfo"><input type="checkbox"></td>
+                <td class="tableInfo">markotto@gmail.com</td>
+                <td class="d-flex tablebtn border-0">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#sendMail">Envoyer un mail</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+        <!-- <div class="all d-flex justify-content-end">
+            <button class="btn btnVoiTout mt-3" data-bs-toggle="modal" data-bs-target="#sendMail">Envoyer à tous</button>
+        </div> -->
+    </div>
+
+</div>
+
+
+
+
+
+<!-- Modal Send mail -->
+<div class="modal fade" id="sendMail" tabindex="-1" aria-labelledby="sendMailLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title w-100 fs-5 fw-bold text-center" id="sendMailLabel">Newsletter</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="libelle" class="col-form-label">Libellé:</label>
+                        <input type="text" class="form-control border border-danger" id="libelle" placeholder="Libellé de la newsletter">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Message:</label>
+                        <textarea class="form-control" id="message-text" rows="10" placeholder="message"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer d-flex justify-content-between">
+                <!-- data-bs-dismiss="modal" -->
+                <button type="button" class="btn btnEnvoi fw-bold">Envoyer</button>
+                <button type="button" class="btn btnAnnuler fw-bold">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>

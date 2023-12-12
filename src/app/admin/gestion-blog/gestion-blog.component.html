@@ -1,0 +1,174 @@
+<!-- debut du contenu de la page blog dashboard admin -->
+<div>
+    <h3 class="text-center mt-2 fw-bold titremere-blog">Listes des blogs</h3>
+    <div class="d-flex justify-content-between">
+        <button class="btn fw-bold  boutonajouter-blog" data-bs-toggle="modal" data-bs-target="#ajoutArticle">Ajouter un article</button>
+        <input type="text" class="" placeholder="Rechercher par titre">
+          <!-- <button class="rounded-end-4 boutoncherchemoi-article"><i class="bi bi-search"></i></button> -->
+    </div>
+</div>
+
+<!-- rounded-start-4 inputrecherchemoi-article -->
+
+
+<div class="container mt-4 mb-5">
+  <div class="row">
+    <div class="col-12 col-md-4" *ngFor="let article of articles">
+      <div class="card border mb-2">
+        <img [src]="article.photo" class="img-fluid" alt="">
+        <div class="bodyArticle px-4">
+          <h3 class="mt-3 text-center">{{ article.titre }}</h3>
+          <p>{{ article.description }}</p>
+          <div class="btnArticle mb-3 d-flex justify-content-center">
+            <button class="btn btn-info text-light" (click)="showArticleDetails(article)" data-bs-toggle="modal" data-bs-target="#detailArticle">Détails</button>
+            <button class="btn btn-warning text-danger mx-3" data-bs-toggle="modal" data-bs-target="#editArticleModal"
+              (click)="editArticle(article)">Modifier</button>
+            <button class="btn btn-danger" (click)="deleteArticle(article.id ?? -1)">Supprimer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- fin du contenu de la page blog dashboard admin -->
+
+<!-- pagination -->
+<div class="pagin d-flex justify-content-center">
+  <nav aria-label="Page navigation example">
+      <ul class="pagination">
+          <li class="page-item">
+              <a class="page-link" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+              </a>
+          </li>
+          <li class="page-item active"><a class="page-link">1</a></li>
+          <li class="page-item"><a class="page-link">2</a></li>
+          <li class="page-item"><a class="page-link">3</a></li>
+          <li class="page-item">
+              <a class="page-link" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+              </a>
+          </li>
+      </ul>
+  </nav>
+</div>
+<!-- pagination -->
+
+
+
+<!-- debut model d'ajoute d'un article dans le blog --> 
+  <div class="modal fade" id="ajoutArticle" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title w-100 fs-4 titreAjout text-center">Ajouter un article</h1>
+          <button type="button" class="btn btn-closeAjout" data-bs-dismiss="modal" ><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+            <form class="ajoutArticle" (submit)="addArticle()">
+              <div class="mb-3">
+                <label for="titreArticle">Titre de l'article:</label>
+                <input class="form-control" type="text" id="titreArticle" name="titreArticle" [(ngModel)]="titreArticle" required>
+              </div>
+
+              <div class="mb-4">
+                <label for="inputImage" class="form-label fw-bold">Image</label>
+                <input type="file" class="form-control" id="inputGroupFile02" name="articlePhoto" [(ngModel)]="articlePhoto">
+              </div>
+            
+              <!-- <div class="mb-3">
+                <label for="articlePhoto">Photo de l'article:</label>
+                <input class="form-control" type="text" id="articlePhoto" name="articlePhoto" [(ngModel)]="articlePhoto" required>
+              </div> -->
+            
+              <div class="mb-3">
+                <label for="descriptionArticle">Description de l'article:</label>
+                <input class="form-control" type="text" id="descriptionArticle" name="descriptionArticle"
+                  [(ngModel)]="descriptionArticle" required>
+              </div>
+            
+              <button class="btn btn-add" type="submit">Ajouter</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- fin du model d'ajoute d'un article dans le blog -->
+
+
+
+<!-- debut du model de modification  -->
+<div class="modal fade" id="editArticleModal" tabindex="-1" aria-labelledby="modifierLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title titreMdfArticle w-100 text-center fs-3" id="modifierLabel">Modifier article</h1>
+          <button type="button" class="btn btn-closeAjout" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="modal-body">
+            <form class="mdfArticle" (submit)="updateArticle()">
+              <div class="mb-3">
+                <label for="editTitle">Nouveau titre:</label>
+                <input id="editTitle" class="form-control" [(ngModel)]="editedArticle.titre" name="titre" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="editPhoto">Nouvelle photo:</label>
+                <input id="editPhoto " class="form-control" [(ngModel)]="editedArticle.photo" name="photo" required>
+              </div>
+            
+              <div class="mb-3">
+                <label for="editDescription">Nouvelle description:</label>
+                <textarea id="editDescription" class="form-control" [(ngModel)]="editedArticle.description" name="description"
+                  required></textarea>
+              </div>
+            
+              <div class="mdfBtns d-flex justify-content-between">
+                <button type="submit" class="btn btnUpdate" data-bs-dismiss="modal">Enregistrer</button>
+                <button type="button" class="btn btnAnnuler" data-bs-dismiss="modal" (click)="cancelEditing()">Annuler</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- fin du model de modification  -->
+
+
+
+<!-- debut du model article details -->
+<div class="modal fade" id="detailArticle" tabindex="-1" aria-labelledby="detailArticle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title titreDetail w-100 fs-3 text-center">Details de l'article</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div *ngIf="selectedArticle" class="article-details">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <img class="img-fluid" [src]="selectedArticle.photo" alt="{{ selectedArticle.titre }}">
+                </div>
+                <div class="col-12 col-md-6">
+                  <h2 class="mb-3 titreDetail">{{ selectedArticle.titre }}</h2>
+                  <h4  class="">Description:</h4>
+                  <p class="mb-4">{{ selectedArticle.description }}</p>
+                  <button type="button" class="btn btn-primary me-2 boutonpubliermodel-blog">Commentaires</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end mb-4 mx-2">
+            <button class="btn btnCloseDetail" data-bs-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+    </div>
+
+</div>
+<!-- fin du model article details -->
+ 
+ 

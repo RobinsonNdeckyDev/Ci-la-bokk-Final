@@ -1,0 +1,33 @@
+@import url(../../admin/dashboard-admin/dashboard-admin.component.css);
+
+/* .btnVoiTout{
+    float: right;
+} */
+
+.tablebtn button{
+    border: 2px solid #308AA7;
+    border-radius: 25px;
+    color: #308AA7;
+    font-weight: bold;
+}
+
+.tablebtn button:hover{
+    background-color: #E75761;
+    color: white;
+    border: 2px solid white;
+}
+
+.btnEnvoi{
+    background-color: #308AA7;
+    color: white;
+}
+
+.btnAnnuler{
+    background-color: #E75761;
+    color: white;
+}
+
+.modal-title{
+    color: #E75761;
+    font-weight: bold;
+}

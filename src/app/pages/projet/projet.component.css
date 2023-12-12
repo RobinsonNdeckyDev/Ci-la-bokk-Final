@@ -1,0 +1,114 @@
+
+.imgSlide img {
+    height: 95vh !important;
+    filter: brightness(1);
+}
+
+.carte{
+    border: 1px solid #E75761;
+    border-radius: 10px;
+}
+
+.btnCategorie{
+    background-color: #308AA7;
+    color: white;
+    font-weight: bold;
+}
+
+.btnCategorie:hover{
+    position: relative;
+    background-color: #E75761;
+    bottom: 5px;
+}
+
+.btnCategorieActive{
+    background-color: #E75761;
+}
+
+.carte .detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.detail button{
+    border: 2px solid #E75761;
+    color: #E75761;
+}
+
+.detail button:hover{
+    background-color: #E75761;
+    color: white;
+}
+
+.detail button:hover .detailLink{
+    color: white;
+}
+
+.carte:hover{
+    position: relative;
+    bottom: 10px;
+}
+
+.carte:hover .carteTitre{
+    color: #308AA7 !important;
+}
+
+
+.detail .detailLink{
+    color: #E75761;
+    text-decoration: none;
+}
+
+.card-body p{
+    text-align: justify;
+}
+
+.pagination li a{
+    color: #E75761;
+}
+
+.dropdown-toggle{
+    background-color: #E75761 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+.textimg{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.textimg h2{
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+}
+.textimg span{
+    color: wwhite;
+    font-size: 18px;
+    font-weight: bold !important;
+}
+
+.dropdown{
+    display: none;
+}
+
+
+/* btn categorie choice */
+.fond-btn {
+    background-color: #E75761;
+    color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .dropdown{
+        display: block;
+    }
+
+    .categories{
+        display: none !important;
+    }
+}

@@ -1,0 +1,45 @@
+.contact-icone{
+    display: flex;
+    justify-content: space-around;
+    }
+    .contact-carte{
+        width: 100%;
+        height: 70vh;
+        border: 2px solid #308AA7;
+        padding: 0;
+    }
+    .icone-contactcolor{
+     color: #308AA7;
+    }
+    .boutoncolor{
+     background-color: #308AA7;
+     color: white;
+     font-size: larger;
+     font-weight: 600;
+    }
+    .formulaire-contact{
+        /* margin-top: 150px; */
+    }
+    .titre-contactettitreicone{
+        color :#E75761
+    }
+    .imagecontact img {
+        width: 100%;
+        height: 80vh;
+    }
+    
+    @media screen and (max-width: 1024px){
+        .contact-cartecouleudroit{
+         display: none;
+        }
+    }
+    @media screen and (max-width:780px) {
+        .contact-icone{
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 0 auto;
+            padding: 5px auto;
+          }
+    }
+    
+    

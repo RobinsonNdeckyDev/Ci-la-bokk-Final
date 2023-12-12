@@ -1,0 +1,67 @@
+@import url(../../admin/dashboard-admin/dashboard-admin.component.css);
+@import url(../gestion-bailleurs/gestion-bailleurs.component.css);
+
+.titreDash{
+    color: #308AA7;
+}
+
+.search{
+    display: flex;
+    justify-content: end;
+}
+
+.iconsearch{
+    background-color: #E75761;
+}
+
+.iconsearch i{
+    color: white;
+}
+
+.inputPorteur{
+    border: 1px solid #E75761 !important;
+}
+
+.tableIcons button{
+    margin-left: 5px;
+    margin-right: 5px;
+    /* font-size: 30px; */
+}
+
+.tableIcons button i{
+    color: white;
+}
+
+.pagination li{
+    border: none;
+}
+
+.pagination li a{
+    color: black;
+    cursor: pointer;
+}
+
+.pagination .active a{
+    background-color: #E75761;
+    color: white;
+}
+
+.profilPorteur{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.ligne-table{
+    height: 30px;
+}
+
+.tableInfo{
+    padding-top: 20px;
+}
+
+.btnBailleurClose{
+    background-color: #E75761 !important;
+}
+
+/* Css import */

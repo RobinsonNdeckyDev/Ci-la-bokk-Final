@@ -1,0 +1,66 @@
+.footer {
+    background-color: #308AA7;
+}
+
+.logoFooter {
+    width: 150px;
+}
+
+h5 {
+    font-size: 30px;
+}
+
+.titreFooter {
+    font-weight: bold;
+}
+
+.iconeListe {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.iconeListe li a {
+    text-decoration: none;
+    color: white;
+}
+
+.iconeListe li a:hover {
+    position: relative;
+    bottom: 8px;
+}
+
+.iconeListe li a:hover i {
+    color: #E75761;
+}
+
+.footerLink:hover{
+    color: #E75761 !important;
+}
+
+.iconeListe li i {
+    font-size: 20px;
+}
+
+.rect-footer {
+    background-color: #085B75;
+    margin: 0;
+}
+
+.rect-footer1 {
+    border-radius: 0 100px 0 0;
+}
+
+.rect-footer2 {
+    border-radius: 100px 0 0 0;
+}
+
+
+/* Média queries */
+@media screen and (max-width: 700px) {
+    .design {
+        display: none;
+    }
+}
