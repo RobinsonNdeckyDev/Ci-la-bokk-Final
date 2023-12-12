@@ -8,7 +8,8 @@ import { User } from '../Models/user.model';
 })
 export class UtilisateurServiceService {
 
-  private apiUrl = "http://[::1]:3000/users";
+  private apiUrl = "https://silabok.mouhamadoufaye.tech/api/users";
+  // private apiUrl = "http://[::1]:3000/users";
 
   constructor(private http: HttpClient) {}
 
