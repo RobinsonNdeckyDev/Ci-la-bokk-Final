@@ -19,6 +19,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { InscriptionBailleurComponent } from './auth/inscription-bailleur/inscription-bailleur.component';
 import { InscriptionPorteurComponent } from './auth/inscription-porteur/inscription-porteur.component';
 import { AuthGuard } from './gardes/auth.guard';
+import { GestionPorteursComponent } from './admin/gestion-porteurs/gestion-porteurs.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/accueil', pathMatch: 'full' }, // Redirection par défaut
@@ -44,7 +45,7 @@ const routes: Routes = [
   { path: 'inscriptionBailleur', component: InscriptionBailleurComponent, canActivate: [AuthGuard] },
   { path: 'inscriptionPorteur', component: InscriptionPorteurComponent , canActivate: [AuthGuard] },
   { path: 'dasboardPorteur/:id', component: AjoutProjetComponent, canActivate: [AuthGuard] },
-
+  { path: 'projects/:id', component: GestionPorteursComponent },
 ];
 
 @NgModule({
