@@ -42,8 +42,8 @@ const routes: Routes = [
   { path: 'admin', component: DashboardAdminComponent, canActivate: [AuthGuard] },
   { path: 'dashboard/:userId', component: DashboardAdminComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'inscriptionBailleur', component: InscriptionBailleurComponent, canActivate: [AuthGuard] },
-  { path: 'inscriptionPorteur', component: InscriptionPorteurComponent , canActivate: [AuthGuard] },
+  { path: 'inscriptionBailleur', component: InscriptionBailleurComponent},
+  { path: 'inscriptionPorteur', component: InscriptionPorteurComponent ,},
   { path: 'dasboardPorteur/:id', component: AjoutProjetComponent, canActivate: [AuthGuard] },
   { path: 'projects/:id', component: GestionPorteursComponent },
 ];

@@ -34,6 +34,7 @@ export class GestionCatgoriesComponent {
   });
 }
   
+ajouterCategorie(){}
 
 }
 

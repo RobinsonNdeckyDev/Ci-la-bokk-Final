@@ -16,7 +16,7 @@ export class InscriptionBailleurComponent {
   password: string= "";
   telephone: string= "";
   image: string = "";
-  organisation: string = "";
+  organisme: string = "";
   description: string = "";
   role: string = "";
 
@@ -57,6 +57,8 @@ export class InscriptionBailleurComponent {
       this.alertMessage("error","Attention","Merci de renseigner image de profil!");
     }else if(this.description == ""){
       this.alertMessage("error","Attention","Merci de renseigner votre description!");
+    }else if(this.organisme == ""){
+      this.alertMessage("error","Attention","Merci de renseigner votre organisme!");
     }else {
       let newUser: User = {
         name: this.nom,
@@ -64,7 +66,7 @@ export class InscriptionBailleurComponent {
         password:this.password,
         telephone: this.telephone,
         image: this.image,
-        organisation: this.organisation,
+        organisme: this.organisme,
         description: this.description,
         role: "Bailleur"
       };
