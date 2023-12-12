@@ -23,6 +23,7 @@ export class GestionPorteursComponent implements OnInit {
   this.porteurProjectService.getPorteursDeProjets().subscribe(
     (data : any) => {
       console.log('Données récupérées :', data); // Vérifiez le format des données ici
+       // Vérifiez
       this.porteursDeProjets = data.Porteurs;
     },
     (error) => {
