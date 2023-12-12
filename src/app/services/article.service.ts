@@ -1,23 +1,21 @@
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article } from '../Models/article.model';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
 
-  private apiUrl = "http://[::1]:3000/articles";
+  private apiUrl = "https://silabok.mouhamadoufaye.tech/api";
   
-  
-  // private apiUrl = "https://127.0.1.8000/api";
-
 
   constructor(private http: HttpClient) {}
 
   getArticles(): Observable<Article[]> {
-    return this.http.get<Article[]>(this.apiUrl);
+    return this.http.get<Article[]>(`${this.apiUrl}/voirArticles`);
   }
 
   getArticleById(id: number): Observable<Article> {
@@ -26,17 +24,17 @@ export class ArticleService {
   }
 
   addArticle(article: Article): Observable<Article> {
-    return this.http.post<Article>(this.apiUrl, article);
+    return this.http.post<Article>(`${this.apiUrl}/ajouterArticle`, article);
   }
 
   updateArticle(article: Article): Observable<Article> {
     const url = `${this.apiUrl}/${article.id}`;
-    return this.http.put<Article>(url, article);
+    return this.http.put<Article>(`${this.apiUrl}/modifierArticle`, article);
   }
 
   deleteArticle(id: number): Observable<void> {
     const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<void>(url);
+    return this.http.delete<void>(`${this.apiUrl}/supprimerArticle/${id}`);
   }
   
 }

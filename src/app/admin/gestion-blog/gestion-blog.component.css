@@ -5,6 +5,14 @@
     /* width: 900px; */
     height: auto;
 }
+.iconsearch {
+    background-color: #E75761;
+    color: white;
+}
+
+.iconsearch i {
+    color: white;
+}
 .boutonajouter-blog{
    background-color: #E75761;
    color: white;
@@ -49,6 +57,13 @@
     width: 100%;
     min-height: 200px;
 }
+.imagearticle-detailblog{
+    width: 100%;
+}
+.description-article{
+    height: 200px;
+    resize: vertical; 
+}
 .pagination li {
     border: none;
 }
@@ -58,20 +73,32 @@
     cursor: pointer;
 }
 
-.pagination .active a {
-    background-color: #E75761;
-    color: white;
+.pagination .active {
+    background-color: #E75761 !important;
+    color: white !important;
 }
+.limited-height {
+    max-height: 3em; /* Hauteur maximale de deux lignes, ajustez selon vos besoins */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    display: block;
+    -webkit-line-clamp: 1; /* Nombre de lignes à afficher */
+  }
+.titre-carte-contact{
+    /* color: #308AA7; */
+    color: white;
+    background-color: #E75761;
+    font-weight: 700;
+    font-size: larger;
+   }
+.titremere-contact{
+       color: #308AA7;
+   }
+
 @media screen and (max-width:1200px) {
     
 }
-
-
-
-
-
-
-
 /* **************************************************************************************************************************** */
 
 .ajoutArticle input{
