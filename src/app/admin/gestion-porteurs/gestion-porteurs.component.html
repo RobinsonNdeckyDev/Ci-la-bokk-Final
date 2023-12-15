@@ -1,6 +1,6 @@
 <div class="card p-3 m-0 shadow border-0">
     <h1 class="text-center titreDash fw-bold mb-4">Liste des porteurs de projet</h1>
-    
+
 
     <div class="contentPorteur">
         <div class="search">
@@ -11,100 +11,53 @@
         </div>
 
         <!-- table porteurs -->
-        <div class="table-data container-fluid" id="container-table">
-            <div class="order p-0">
-                
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Photo</th>
-                            <th scope="col">Nom complet</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Téléphone</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="ligne-table">
-                            <th><img class="img-fluid profilPorteur" src="../../../assets/images/bannieres/ban5.jpg" alt=""></th>
-                            <td class="tableInfo">Mark Otto</td>
-                            <td class="tableInfo">markotto@gmail.com</td>
-                            <td class="tableInfo">76 456 34 45</td>
-                            <td class="d-flex tableIcons border-0">
-                                <button class="btn btn-info p-2" data-bs-toggle="modal" data-bs-target="#detailPorteur"><i class="bi bi-eye-fill i1"></i></button>
-                                <button class="btn btn-danger p-O"><i class="bi bi-x-square-fill i2"></i></button>
-                                <!-- <button class="btn btn-warning p-O"><i class="bi bi-power i3"></i></button> -->
-                            </td>
-                        </tr>
-                        <tr class="ligne-table">
-                            <th><img class="img-fluid profilPorteur" src="../../../assets/images/bannieres/ban5.jpg" alt=""></th>
-                            <td class="tableInfo">Mark Otto</td>
-                            <td class="tableInfo">markotto@gmail.com</td>
-                            <td class="tableInfo">76 456 34 45</td>
-                            <td class="d-flex tableIcons border-0">
-                                <button class="btn btn-info p-2" data-bs-toggle="modal" data-bs-target="#detailPorteur"><i class="bi bi-eye-fill i1"></i></button>
-                                <button class="btn btn-danger p-O"><i class="bi bi-x-square-fill i2"></i></button>
-                                <!-- <button class="btn btn-warning p-O"><i class="bi bi-power i3"></i></button> -->
-                            </td>
-                        </tr>
-                        <tr class="ligne-table">
-                            <th><img class="img-fluid profilPorteur" src="../../../assets/images/bannieres/ban5.jpg" alt=""></th>
-                            <td class="tableInfo">Mark Otto</td>
-                            <td class="tableInfo">markotto@gmail.com</td>
-                            <td class="tableInfo">76 456 34 45</td>
-                            <td class="d-flex tableIcons border-0">
-                                <button class="btn btn-info p-2" data-bs-toggle="modal" data-bs-target="#detailPorteur"><i class="bi bi-eye-fill i1"></i></button>
-                                <button class="btn btn-danger p-O"><i class="bi bi-x-square-fill i2"></i></button>
-                                <!-- <button class="btn btn-warning p-O"><i class="bi bi-power i3"></i></button> -->
-                            </td>
-                        </tr>
-                        <tr class="ligne-table">
-                            <th><img class="img-fluid profilPorteur" src="../../../assets/images/bannieres/ban5.jpg" alt=""></th>
-                            <td class="tableInfo">Mark Otto</td>
-                            <td class="tableInfo">markotto@gmail.com</td>
-                            <td class="tableInfo">76 456 34 45</td>
-                            <td class="d-flex tableIcons border-0">
-                                <button class="btn btn-info p-2" data-bs-toggle="modal" data-bs-target="#detailPorteur"><i class="bi bi-eye-fill i1"></i></button>
-                                <button class="btn btn-danger p-O"><i class="bi bi-x-square-fill i2"></i></button>
-                                <!-- <button class="btn btn-warning p-O"><i class="bi bi-power i3"></i></button> -->
-                            </td>
-                        </tr>
-                        <tr class="ligne-table">
-                            <th><img class="img-fluid profilPorteur" src="../../../assets/images/bannieres/ban5.jpg" alt=""></th>
-                            <td class="tableInfo">Mark Otto</td>
-                            <td class="tableInfo">markotto@gmail.com</td>
-                            <td class="tableInfo">76 456 34 45</td>
-                            <td class="d-flex tableIcons border-0">
-                                <button class="btn btn-info p-2" data-bs-toggle="modal" data-bs-target="#detailPorteur"><i class="bi bi-eye-fill i1"></i></button>
-                                <button class="btn btn-danger p-O"><i class="bi bi-x-square-fill i2"></i></button>
-                                <!-- <button class="btn btn-warning p-O"><i class="bi bi-power i3"></i></button> -->
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
 
-                <div class="pagin d-flex justify-content-center">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                </a>
-                            </li>
-                            <li class="page-item active"><a class="page-link">1</a></li>
-                            <li class="page-item"><a class="page-link">2</a></li>
-                            <li class="page-item"><a class="page-link">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        
+        <div class="table-responsive table-data container-fluid" id="container-table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Objectif</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let porteur of porteursDeProjets" class="ligne-table">
+                        <td class="tableInfo"> <img class="img-fluid profilPorteur" [src]=porteur.image alt=""></td>
+                        <td class="tableInfo">{{ porteur.name }}</td>
+                        <td class="tableInfo">{{ porteur.email }}</td>
+                        <td class="tableInfo"> {{porteur.objectif}} </td>
+                        <td class="tableInfo"> {{porteur.description}} </td>
+                        <td class="tableInfo"></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
+        
+        <div class="pagin d-flex justify-content-center my-5">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <li class="page-item"><a class="page-link">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </div>
 </div>
 
@@ -161,7 +114,8 @@
                 </div>
             </div>
             <div class="modal-footer border-0">
-                <button type="button" class="btn btnBailleurClose px-3 text-white"  data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btnBailleurClose px-3 text-white"
+                    data-bs-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>

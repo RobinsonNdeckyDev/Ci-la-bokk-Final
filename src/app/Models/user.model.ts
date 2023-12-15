@@ -6,6 +6,6 @@ export interface User{
     image: string;
     telephone: string;
     description: string;
-    organisation: string;
+    organisme: string;
     role: string;
 }

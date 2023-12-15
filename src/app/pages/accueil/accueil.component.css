@@ -107,7 +107,11 @@
 }
 
 .hero-section .img img {
-    width: 517px;
+    width: 600px;
+    position: relative;
+    right: -40;
+    bottom: -28px;
+
     /* margin-top: 40vh; */
 }
 

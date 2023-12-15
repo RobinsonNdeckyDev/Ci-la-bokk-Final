@@ -11,3 +11,45 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+.progress{
+    color: #308AA7;
+    position: relative;
+    /* bottom: 0;
+    right: 0; */
+    width: 60%;
+    background-color: #308AA7;
+    font-style: 20px;
+}
+
+#progress{
+   border: 2px solid red;
+   
+}
+
+
+ /* #progress {
+     background-color: #061429;
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     height: 50px;
+     width: 50px;
+     display: none;
+     place-items: center;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+     cursor: pointer;
+ } */
+
+ /* #progressValue {
+     display: block;
+     height: calc(100% - 15px);
+     width: calc(100% - 15px);
+     background-color: var(--main-color);
+    
+     display: grid;
+     place-items: center;
+     font-size: 20px;
+     color: white;
+     font-weight: bold;
+ } */

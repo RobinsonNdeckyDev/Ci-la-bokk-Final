@@ -51,6 +51,7 @@ addCategorie() {
 
     this.categorieService.addCategorie(newCategorie).subscribe(
       () => {
+        // this.categorie.unshift(newCategorie);
         document.getElementById("close-modal")?.click();
         this.alertMessage("success", "Bravo!", "Catégorie ajoutée avec succès");
         this.loadCategorie();
