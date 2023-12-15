@@ -90,8 +90,7 @@ export class GestionBlogComponent {
 
   // Récupération des articles 
   loadArticles() {
-      this.articleService.getArticles().subscribe((reponse : any) => {
-        console.log("LISTE DATAS");
+      this.articleService.getArticles().subscribe((reponse:any) => {
         console.log(reponse);
       this.articles = reponse.data;
 
@@ -163,6 +162,7 @@ export class GestionBlogComponent {
   updateArticle() {
     this.articleService.updateArticle(this.editedArticle).subscribe(() => {
       this.isEditing = false;
+      console.log(this.editedArticle)
       this.alertMessage("success", "Bravo!", "Article mis à jour avec succès");
       this.loadArticles();
     });

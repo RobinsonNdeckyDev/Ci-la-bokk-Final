@@ -28,9 +28,10 @@ export class ArticleService {
   }
 
   updateArticle(article: Article): Observable<Article> {
-    const url = `${this.apiUrl}/${article.id}`;
-    return this.http.put<Article>(`${this.apiUrl}/modifierArticle`, article);
-  }
+    const url = `${this.apiUrl}/modifierArticle/{article}`;
+    return this.http.put<Article>(url, article);
+}
+
 
   deleteArticle(id: number): Observable<void> {
     const url = `${this.apiUrl}/${id}`;

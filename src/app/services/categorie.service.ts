@@ -22,9 +22,11 @@ export class CategorieService {
   }
 
   deleteCategorie(id: number): Observable<void> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.delete<void>(`${this.apiUrl}/supprimerCategorie/${id}`);
+    const url = `${this.apiUrl}/SupprimerCategorie/${id}`;
+    return this.http.delete<void>(url);
   }
+  
+  
   
 
 
